@@ -11,8 +11,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0; /* Keeps the '0 auto' logic */
-  
-  padding: 1rem;
 }
 
 /* This rule makes the image fill the container */

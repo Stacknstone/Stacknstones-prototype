@@ -1,0 +1,63 @@
+# Simple workflow for deploying a static Vite site to GitHub Pages
+name: Deploy Vite Site to Pages
+
+on:
+  # Runs on pushes to the 'main' branch
+  push:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Or your preferred version
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        # Runs the 'npm run build' command. 
+        # It MUST use the correct 'base' in your vite.config.js!
+        run: npm run build 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        # This uploads the 'dist' folder (Vite's default)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+  # Deploy job
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    # ----------------------------------
+    # These are the permissions we added in the previous step
+    # ----------------------------------
+    permissions:
+      pages: write
+      id-token: write
+
+    # ----------------------------------
+    # This is the environment we added in the previous step
+    # ----------------------------------
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -75,6 +75,63 @@
   margin: 0;
 }
 
+.socialsSection {
+  /* This centers the whole block on the page */
+  max-width: 768px;
+  margin: 0 auto; 
+  
+  /* Spacing */
+  padding: 2rem 1rem 4rem 1rem;
+  
+  /* A temporary border so YOU can see it */
+  border: 1px dashed blue;
+}
+
+/* --- The Title --- */
+.socialsTitle {
+  text-align: center; /* Center the text */
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* --- The Icon Container (The Flexbox) --- */
+.socialsContainer {
+  display: flex; /* Make it a flexbox */
+  width: 100%;   /* CRITICAL: Force it to be 100% wide */
+  padding: 0;   /* Remove any default padding */
+  margin: 0;    /* Remove any default margin */
+  
+  /* A temporary border so YOU can see it */
+  border: 1px dashed red;
+}
+
+/* --- The Icons (The Flex Items) --- */
+.socialIcon:link,
+.socialIcon:visited {
+  flex-grow: 1;  /* CRITICAL: Tell each icon to grow and fill space */
+  text-align: center; /* CRITICAL: Center the icon in its new, wider box */
+  
+  /* Your other styles */
+  color: #444; 
+  text-decoration: none; 
+  transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+/* --- The Hover States (No change) --- */
+.socialIcon:hover {
+  transform: scale(1.25);
+}
+.instagram:hover {
+  color: #E1306C;
+}
+.whatsapp:hover {
+  color: #25D366;
+}
+.linkedin:hover {
+  color: #0A66C2;
+}
 
 /* --- 4. Mobile Adjustments --- */
 @media (max-width: 768px) {
@@ -94,37 +151,4 @@
     /* Center text on mobile */
     text-align: center;
   }
-}
-.socials-container {
-  display: flex;
-  width: 80%; 
-  justify-content: space-around;/* Arrange icons in a row */
-}
-
-.socialIcon:link,
-.socialIcon:visited {
-  color: #444; /* Default icon color */
-  text-decoration: none; /* Gets rid of the underline */
-  transition: transform 0.2s ease-in-out, color 0.2s;
-}
-
-/* This is the hover state */
-.socialIcon:hover {
-  transform: scale(1.25);
-  /* The color will be handled by the brand-specific classes */
-}
-
-/* These brand color rules are still correct */
-.instagram:hover {
-  color: #E1306C;
-}
-.whatsapp:hover {
-  color: #25D366;
-}
-.linkedin:hover {
-  color: #0A66C2;
-}
-
-.social-icon:hover {
-  transform: scale(1.2); /* Enlarge on hover */
 }

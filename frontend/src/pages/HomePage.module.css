@@ -97,8 +97,8 @@
 }
 .socials-container {
   display: flex; /* Arrange icons in a row */
-  justify-content: center; /* Center them horizontally */
-  gap: 1.5rem; /* Add space between icons */
+  justify-content: space-evenly; /* Center them horizontally */
+  gap: 5rem; /* Add space between icons */
   margin-top: 1rem;
 }
 

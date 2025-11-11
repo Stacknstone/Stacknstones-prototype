@@ -102,22 +102,30 @@
   margin-top: 1rem;
 }
 
-.social-icon {
-  color: #333; /* Default icon color (dark grey) */
+.socialIcon:link,
+.socialIcon:visited {
+  color: #444; /* Default icon color */
+  text-decoration: none; /* Gets rid of the underline */
   transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+/* This is the hover state */
+.socialIcon:hover {
+  transform: scale(1.25);
+  /* The color will be handled by the brand-specific classes */
+}
+
+/* These brand color rules are still correct */
+.instagram:hover {
+  color: #E1306C;
+}
+.whatsapp:hover {
+  color: #25D366;
+}
+.linkedin:hover {
+  color: #0A66C2;
 }
 
 .social-icon:hover {
   transform: scale(1.2); /* Enlarge on hover */
-}
-
-/* Optional: Add brand colors on hover */
-.social-icon.instagram:hover {
-  color: #E1306C;
-}
-.social-icon.whatsapp:hover {
-  color: #25D366;
-}
-.social-icon.linkedin:hover {
-  color: #0A66C2;
 }

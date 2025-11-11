@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './HomePage.module.css'; // This is the new CSS file below
-
+import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 import AnimatedLogo from '../components/AnimatedLogo';
 import ContactForm from '../components/ContactForm';
 
@@ -87,11 +87,53 @@ function HomePage() {
           </p>
         </motion.div>
       </motion.section>
+      <motion.section
+        className={styles.socialsSection}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={itemVariants} // Use the same simple fade-in
+      >
+        <h2 className={styles.socialsTitle}>Connect With Us</h2>
+        <div className={styles.socialsContainer}>
+          
+          {/* --- Remember to add your real links here! --- */}
+          
+          <a 
+            href="https://www.instagram.com/your-username" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`${styles.socialIcon} ${styles.instagram}`}
+          >
+            <FaInstagram size={30} />
+          </a>
+          
+          <a 
+            href="https://wa.me/919876543210" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`${styles.socialIcon} ${styles.whatsapp}`}
+          >
+            <FaWhatsapp size={30} />
+          </a>
+          
+          <a 
+            href="https://www.linkedin.com/in/your-profile" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`${styles.socialIcon} ${styles.linkedin}`}
+          >
+            <FaLinkedin size={30} />
+          </a>
+
+        </div>
+      </motion.section>
 
       {/* --- 3. Contact Form --- */}
       <ContactForm />
 
     </div>
+    
   );
 }
 

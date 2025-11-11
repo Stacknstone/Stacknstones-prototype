@@ -94,7 +94,7 @@ function HomePage() {
         viewport={{ once: true, amount: 0.3 }}
         variants={itemVariants} // Use the same simple fade-in
       >
-        <h2 className={styles.socialsTitle}>Connect With Us</h2>
+        <h2 className={styles.socialsTitle}>Follow Us On Our Socials</h2>
         <div className={styles.socialsContainer}>
           
           {/* --- Remember to add your real links here! --- */}

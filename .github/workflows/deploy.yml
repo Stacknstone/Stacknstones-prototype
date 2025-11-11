@@ -1,5 +1,16 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -12,32 +23,20 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        # ----------------------------------
-        # ADD THIS LINE
-        # ----------------------------------
         working-directory: ./frontend
         run: npm install
 
       - name: Build
-        # ----------------------------------
-        # ADD THIS LINE
-        # ----------------------------------
         working-directory: ./frontend
-        run: npm run build 
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
+        run: |
+          npm run build
+          cp dist/index.html dist/404.html
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # ----------------------------------
-          # MAKE SURE THIS PATH IS CORRECT
-          # ----------------------------------
-          # It should be the build output folder *inside* your 'frontend' folder
-          path: './frontend/dist' 
-          
-  # Deploy job (this part stays the same)
+          path: './frontend/dist'
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

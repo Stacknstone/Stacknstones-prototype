@@ -97,7 +97,8 @@
 }
 .socials-container {
   display: flex;
-  width: 80%; /* Arrange icons in a row */
+  width: 80%; 
+  justify-content: space-around;/* Arrange icons in a row */
 }
 
 .socialIcon:link,

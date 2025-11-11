@@ -95,3 +95,29 @@
     text-align: center;
   }
 }
+.socials-container {
+  display: flex; /* Arrange icons in a row */
+  justify-content: center; /* Center them horizontally */
+  gap: 1.5rem; /* Add space between icons */
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: #333; /* Default icon color (dark grey) */
+  transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Optional: Add brand colors on hover */
+.social-icon.instagram:hover {
+  color: #E1306C;
+}
+.social-icon.whatsapp:hover {
+  color: #25D366;
+}
+.social-icon.linkedin:hover {
+  color: #0A66C2;
+}

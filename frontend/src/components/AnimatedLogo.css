@@ -3,10 +3,10 @@
   width: 100%;
   
   /* 2. REDUCE THIS VALUE to make the logo smaller */
-  max-width: 400px; /* Was 768px */
+  max-width: 250px; /* Was 768px */
 
   /* 1. ADD THIS LINE to create a gap at the top */
-  margin-top: 4rem; /* Adjust '2rem' to whatever gap you like */
+  margin-top: 6rem; /* Adjust '2rem' to whatever gap you like */
 
   margin-left: auto;
   margin-right: auto;

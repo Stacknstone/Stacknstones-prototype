@@ -1,9 +1,16 @@
 /* This rule controls the size and centering of your logo */
 .animated-logo-container {
   width: 100%;
-  max-width: 768px; 
-  margin: 0 auto;
-  padding: 1rem;
+  
+  /* 2. REDUCE THIS VALUE to make the logo smaller */
+  max-width: 600px; /* Was 768px */
+
+  /* 1. ADD THIS LINE to create a gap at the top */
+  margin-top: 2rem; /* Adjust '2rem' to whatever gap you like */
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0; /* Keeps the '0 auto' logic */
 }
 
 /* This rule makes the image fill the container */

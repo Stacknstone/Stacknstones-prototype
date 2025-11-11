@@ -1,0 +1,56 @@
+# Name of the workflow
+name: Deploy to GitHub Pages
+
+# Run this workflow on a push to the 'main' branch
+on:
+  push:
+    branches: [ "main" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Give the workflow correct permissions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define the jobs
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # You can change this to your Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the site
+        run: |
+          npm run build
+          cp dist/index.html dist/404.html
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist # This is the folder that 'npm run build' creates
+
+  deploy:
+    # This job needs the 'build' job to finish first
+    needs: build
+    runs-on: ubuntu-latest
+    
+    # Set the deployment environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

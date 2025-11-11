@@ -103,8 +103,6 @@
 
 .socialIcon:link,
 .socialIcon:visited {
-  flex-grow: 1;
-  text-align: center;
   color: #444; /* Default icon color */
   text-decoration: none; /* Gets rid of the underline */
   transition: transform 0.2s ease-in-out, color 0.2s;

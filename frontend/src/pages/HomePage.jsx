@@ -87,6 +87,11 @@ function HomePage() {
           </p>
         </motion.div>
       </motion.section>
+      
+
+      {/* --- 3. Contact Form --- */}
+      <ContactForm />
+
       <motion.section
         className={styles.socialsSection}
         initial="hidden"
@@ -105,7 +110,7 @@ function HomePage() {
             rel="noopener noreferrer" 
             className={`${styles.socialIcon} ${styles.instagram}`}
           >
-            <FaInstagram size={30} />
+            <FaInstagram size={45} />
           </a>
           
           <a 
@@ -114,7 +119,7 @@ function HomePage() {
             rel="noopener noreferrer" 
             className={`${styles.socialIcon} ${styles.whatsapp}`}
           >
-            <FaWhatsapp size={30} />
+            <FaWhatsapp size={45} />
           </a>
           
           <a 
@@ -123,18 +128,16 @@ function HomePage() {
             rel="noopener noreferrer" 
             className={`${styles.socialIcon} ${styles.linkedin}`}
           >
-            <FaLinkedin size={30} />
+            <FaLinkedin size={45} />
           </a>
 
         </div>
       </motion.section>
 
-      {/* --- 3. Contact Form --- */}
-      <ContactForm />
-
     </div>
     
   );
+  
 }
 
 export default HomePage;

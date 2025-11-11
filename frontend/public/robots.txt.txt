@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stacknstones.in/sitemap.xml

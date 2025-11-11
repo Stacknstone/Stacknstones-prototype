@@ -2,32 +2,29 @@
 .animated-logo-container {
   width: 100%;
   
-  /* 2. REDUCE THIS VALUE to make the logo smaller */
+
   max-width: 250px; /* Was 768px */
 
-  /* 1. ADD THIS LINE to create a gap at the top */
-  margin-top: 6rem; /* Adjust '2rem' to whatever gap you like */
+
+  margin-top: 6rem; 
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0; /* Keeps the '0 auto' logic */
+  margin-bottom: 0; 
 }
 
-/* This rule makes the image fill the container */
 .logo-image {
   width: 100%;
   height: auto;
   display: block;
   
   /* --- ADD THIS ANIMATION --- */
-  /* We'll name our animation 'fadeInUp' */
   animation: fadeInUp 0.8s ease-out forwards;
   
-  /* Start it as invisible */
+
   opacity: 0;
 }
 
-/* --- ADD THESE KEYFRAMES --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;

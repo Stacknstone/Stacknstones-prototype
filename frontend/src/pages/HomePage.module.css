@@ -1,7 +1,4 @@
-/*
- * HOMEPAGE.MODULE.CSS
- * This file creates the minimal layout.
- */
+
 
 /* --- 1. Page Wrapper --- */
 .pageWrapper {
@@ -23,15 +20,11 @@
 }
 
 .heroHeadline {
-  /* This font suggestion was in your old file. 
-     If you have it loaded, it will look great. 
-  */
-  /* font-family: 'YourSerifFont', serif; */
   font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
-  max-width: 800px; /* Keeps line length readable */
+  max-width: 800px; 
 }
 
 .heroSubtitle {
@@ -39,25 +32,23 @@
   font-weight: 300;
   color: var(--neutral-text, #6b6b6b);
   line-height: 1.7;
-  max-width: 600px; /* Keeps line length readable */
+  max-width: 600px; 
 }
 
 /* --- 3. Core Values Section --- */
 .valuesSection {
   display: grid;
-  /* Creates the 3-column layout on desktop */
+
   grid-template-columns: repeat(3, 1fr); 
   gap: 3rem;
   
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem 8rem 2rem; /* More white space */
+  padding: 0 2rem 8rem 2rem; 
 }
 
 .valueItem {
-  /* You can add a subtle border */
-  /* border-top: 1px solid var(--neutral-stone, #e0e0e0); */
   padding-top: 1rem;
 }
 
@@ -83,8 +74,7 @@
   /* Spacing */
   padding: 2rem 1rem 4rem 1rem;
   
-  /* A temporary border so YOU can see it */
-  border: 1px dashed blue;
+
 }
 
 /* --- The Title --- */
@@ -99,27 +89,26 @@
 /* --- The Icon Container (The Flexbox) --- */
 .socialsContainer {
   display: flex; /* Make it a flexbox */
-  width: 100%;   /* CRITICAL: Force it to be 100% wide */
-  padding: 0;   /* Remove any default padding */
-  margin: 0;    /* Remove any default margin */
+  width: 100%;  
+  padding: 0;   
+  margin: 0;    
   
-  /* A temporary border so YOU can see it */
-  border: 1px dashed red;
+
 }
 
 /* --- The Icons (The Flex Items) --- */
 .socialIcon:link,
 .socialIcon:visited {
-  flex-grow: 1;  /* CRITICAL: Tell each icon to grow and fill space */
-  text-align: center; /* CRITICAL: Center the icon in its new, wider box */
+  flex-grow: 1;  
+  text-align: center; 
   
-  /* Your other styles */
+
   color: #444; 
   text-decoration: none; 
   transition: transform 0.2s ease-in-out, color 0.2s;
 }
 
-/* --- The Hover States (No change) --- */
+/* --- The Hover States --- */
 .socialIcon:hover {
   transform: scale(1.25);
 }

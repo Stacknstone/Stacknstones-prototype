@@ -141,3 +141,29 @@
     text-align: center;
   }
 }
+.addressContainer {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #555; /* Or your theme's secondary text color */
+  gap: 1rem;
+}
+
+.addressIcon {
+  color: #333; /* Darker color for the icon */
+}
+
+.addressText {
+  font-style: normal; /* Removes default italic of address tag */
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: inherit; /* Uses your main font */
+}
+
+/* Optional: Hover effect for the address */
+.addressContainer:hover .addressIcon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

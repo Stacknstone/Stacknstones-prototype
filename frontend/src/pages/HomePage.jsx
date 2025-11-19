@@ -125,9 +125,10 @@ function HomePage() {
         <div className={styles.addressContainer}>
             <FaMapMarkerAlt className={styles.addressIcon} size={24} />
             <address className={styles.addressText}>
-                Stack & Stones<br />
-                New no 64, Old no 38<br />
-                Malayappan Street, Chennai - 600001
+                Stack & Stones,<br />
+                New No. 64 (Old No. 38),<br />
+                Malayappan Street, Mannady, Chennai - 600001,<br />
+                Tamil Nadu, India.
             </address>
         </div>
       </motion.section>

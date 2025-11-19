@@ -39,11 +39,6 @@ export const processUpdates = [
   id: 10,
   imageUrl: 'img10.jpg',
  },
-
-  {
-  id: 11,
-  imageUrl: 'img11.jpg',
- },
   {
   id: 12,
   imageUrl: 'img12.jpg',
@@ -53,25 +48,13 @@ export const processUpdates = [
   imageUrl: 'img13.jpg',
  },
   {
-  id: 14,
-  imageUrl: 'img14.jpg',
- },
-  {
   id: 15,
   imageUrl: 'img15.jpg',
  },
 
   {
-  id: 16,
-  imageUrl: 'img16.jpg',
- },
-  {
   id: 17,
   imageUrl: 'img17.jpg',
- },
-  {
-  id: 18,
-  imageUrl: 'img18.jpg',
  },
  {
   id: 19,

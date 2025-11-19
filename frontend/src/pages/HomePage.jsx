@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './HomePage.module.css'; // This is the new CSS file below
-import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'; // Import Map Icon
 import AnimatedLogo from '../components/AnimatedLogo';
 import ContactForm from '../components/ContactForm';
 
@@ -105,7 +105,7 @@ function HomePage() {
           {/* --- Remember to add your real links here! --- */}
           
           <a 
-            href="https://www.instagram.com/your-username" 
+            href="https://www.instagram.com/stack_n_stones/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={`${styles.socialIcon} ${styles.instagram}`}
@@ -114,23 +114,21 @@ function HomePage() {
           </a>
           
           <a 
-            href="https://wa.me/919876543210" 
+            href="https://wa.me/918015300433" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={`${styles.socialIcon} ${styles.whatsapp}`}
           >
             <FaWhatsapp size={45} />
           </a>
-          
-          <a 
-            href="https://www.linkedin.com/in/your-profile" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={`${styles.socialIcon} ${styles.linkedin}`}
-          >
-            <FaLinkedin size={45} />
-          </a>
-
+        </div>
+        <div className={styles.addressContainer}>
+            <FaMapMarkerAlt className={styles.addressIcon} size={24} />
+            <address className={styles.addressText}>
+                Stack & Stones<br />
+                New no 64, Old no 38<br />
+                Malayappan Street, Chennai - 600001
+            </address>
         </div>
       </motion.section>
 

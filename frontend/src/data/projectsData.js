@@ -2,20 +2,6 @@
 
 export const projects = [
   {
-    id: "68a4bb29c1fbbfc3a49baafb", // Changed _id to id
-    title: "Sales Office",
-    description: "This design achieves a beautiful balance between strength and lightness. A floating roof rests atop walls of expansive glass, while the warm, vertically-clad wood façade grounds the structure with an organic touch, creating a serene urban oasis.",
-    imageUrl: "image1.jpg", // imageUrl is now just a simple string
-    projectLink: "https://example.com/project-one"
-  },
-  {
-    id: "68a4bb53c1fbbfc3a49baafd", // Changed _id to id
-    title: "Sales Office - II",
-    description: "An interior of serene minimalism. The design breathes, blending raw concrete textures with soft, modern furnishings to create a light-filled sanctuary for connection and calm.",
-    imageUrl: "image2.jpg", // imageUrl is now just a simple string
-    projectLink: "https://example.com/project-one"
-  },
-  {
     id: "68a4c262c1fbbfc3a49bab01", // Changed _id to id
     title: "Classic Tropical Mansion",
     description: "A modern manor with a tropical soul. The design commands its lush surroundings with a columned facade and grand verandas, creating a sanctuary of sophisticated comfort and quiet luxury.",
